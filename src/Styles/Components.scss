@@ -1,0 +1,19 @@
+
+.components {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: black;
+    border-top: black;
+    padding: 10px;
+    margin: 0;
+    flex: 2 1 auto;
+
+
+    &_active {
+        color: blue;
+        &:hover{
+            color: coral;
+        }
+    }
+}
+

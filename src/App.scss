@@ -1,0 +1,17 @@
+@import "Styles/Components";
+@import 'Styles/Page';
+
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100px;
+
+
+}
+.navBar {
+  flex-direction: row;
+  text-align: center;
+}
+
+
+
