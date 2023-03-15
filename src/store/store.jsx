@@ -1,14 +1,15 @@
 import {combineReducers, createStore} from "redux";
 import pageName from "../Components/Page/PageName";
-import {pageReducer} from "./pageRedux";
+import {pageReducer} from "../reducers/pageReducer";
 
 
-let reducers=combineReducers({
-    pageItemName:pageReducer
+const ADD_PAGE='ADD-PAGE';
+
+
+export const addPAgeAC=()=>({
+    type: 'ADD-PAGE'
 })
-const store=createStore(reducers,  null);
 
-/*
 let store = {
     state: {
         pageItemName: [
@@ -21,16 +22,18 @@ let store = {
             'https://klike.net/uploads/posts/2019-06/1560329641_2.jpg'
         ]
     },
+    dispatch(action) {
+        switch (action) {
+            case ADD_PAGE:
+                let userItem = {
+                    id: 5,
+                    name: 'hi'
+                }
+                this.state.pageItemName.push(userItem);
 
-    onAddPageItem() {
-        let userItem={
-            id:5,
-            name:'hi'
         }
-        this.state.pageItemName.push(userItem);
     }
-
-
 }
 
-export default store;*/
+
+export default store;

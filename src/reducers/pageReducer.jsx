@@ -1,5 +1,8 @@
 /*const ADD-PAGE='ADD-PAGE'*/
-
+const ADD_PAGE='ADD-PAGE';
+export const addPAgeAC=()=>({
+    type: 'ADD-PAGE'
+})
 const initialState={
     pageItemName: [
         {id: 1, name: 'name1'},
@@ -11,10 +14,14 @@ const initialState={
 
 export  const pageReducer=(state=initialState, action)=>{
     switch (action.type) {
+        case ADD_PAGE:
+            let userItem = {
+                id: 5,
+                name: 'hi'
+            }
+            this.state.pageItemName.push(userItem);
 
     }
     return state;
 }
-export const addAC=()=>{
 
-}

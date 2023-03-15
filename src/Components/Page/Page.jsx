@@ -1,5 +1,9 @@
 import PageItem from "./PageItem";
 import PageName from "./PageName";
+import {addPAgeAC} from "../../store/store";
+
+
+
 
 export const Page = (props) => {
 
@@ -9,13 +13,14 @@ export const Page = (props) => {
 
 
     let onAddItemName = () => {
-        props.store.onAddPageItem();
+
+        props.store.dispatch(addPAgeAC());
     }
 
     return <div className='page'>
         <div className='page_name'>
             {PageNameItem}
-            <div className='page_button' onClick={() => onAddItemName()}>
+            <div className='page_button' onClick={onAddItemName}>
                 click on me
             </div>
         </div>
